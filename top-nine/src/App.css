@@ -17,3 +17,11 @@
 .App-link {
   color: #55DDE0;
 }
+
+.NavLink {
+  color: #E8C547;
+  font-size: 30px;
+  padding: 20px;
+  float: right;
+  text-align: center;
+}
