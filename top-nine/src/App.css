@@ -3,13 +3,13 @@
   font-family: Verdana, Geneva, sans-serif;
 }
 
-.App-header {
+.App-body {
   background-color: #2589BD;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -18,10 +18,34 @@
   color: #55DDE0;
 }
 
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.search-button {
+    color: black;
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid #33658A;
+    border-radius: 3px;
+    background: #2589BD;
+    margin-left: 0.1em;
+}
+
+.search-field {
+    color: black;
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid #33658A;
+    border-radius: 3px;
+    margin-right: 0;
+}
 .NavLink {
   color: #E8C547;
-  font-size: 30px;
   padding: 20px;
-  float: right;
-  text-align: center;
-}
+  font-size: 20px;
+  align-self: center;}

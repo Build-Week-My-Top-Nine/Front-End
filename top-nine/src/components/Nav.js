@@ -1,19 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
-const NavBg = styled.div`
-  background-color: #33658a;
-  height: 90px;
-`;
 
 function NavBar(props) {
   return (
     <div>
-      <NavBg>
-        <Link className='NavLink' to="">Login</Link>
-        <Link className='NavLink' to="">About</Link>
-      </NavBg>
+        <NavLink className='NavLink' to="">Login</NavLink>
+        <NavLink className='NavLink' to="">About</NavLink>
     </div>
   );
 }
