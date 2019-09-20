@@ -1,12 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import LoginForm from './LogInPage'
 
 
 function NavBar(props) {
   return (
     <div>
-        <NavLink className='NavLink' to="">Login</NavLink>
-        <NavLink className='NavLink' to="">About</NavLink>
+      
     </div>
   );
 }
