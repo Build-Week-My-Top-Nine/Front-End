@@ -21,6 +21,7 @@
 .App-header {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .search-button {
@@ -43,3 +44,8 @@
     border-radius: 3px;
     margin-right: 0;
 }
+.NavLink {
+  color: #E8C547;
+  padding: 20px;
+  font-size: 20px;
+  align-self: center;}
