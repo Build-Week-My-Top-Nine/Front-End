@@ -48,7 +48,30 @@
   color: #E8C547;
   padding: 20px;
   font-size: 20px;
-  align-self: center;}
+  align-self: center;
+}
 .Form {
   background-color: white;
+  margin-top: 20px;
+  height: 300px;
+  width: 400px;
+  border-radius: 15px;
+  padding: 20px;
+  padding-top: 40px;
 }
+.Field {
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  font-size: 14px;
+}
+ .button {
+  border-radius: 10px;
+  margin: auto;
+  padding: 20px;
+  font-weight: bold;
+} 
