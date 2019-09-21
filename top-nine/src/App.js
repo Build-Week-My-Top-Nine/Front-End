@@ -1,15 +1,14 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import SearchForm from "./components/SearchForm";
 import styled from "styled-components";
-import { Route } from 'react-router-dom';
+import LoginForm from "./components/LogInPage";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import About from './components/WelcomePage'
 
-import NavBar from './components/Nav'
-import SearchForm from './components/SearchForm';
-import WelcomePage from './components/WelcomePage';
-import Accessories from './components/categories/accessories/AccessoriesCard'
 
 const NavBg = styled.header`
-  background-color: #33658A;
+  background-color: #33658a;
   height: 90px;
 `;
 
@@ -18,18 +17,27 @@ function App() {
     <div className="App">
       <NavBg>
         <header className="App-header">
-        <h1>TopNine</h1>
-        <SearchForm />
-        <NavBar />
-        </header>
+          <h1>TopNine</h1>
+          <SearchForm />
+            <NavLink className="NavLink" to="/Login">
+              Login
+            </NavLink>
+            <NavLink className="NavLink" to="/About">
+              About
+            </NavLink>
+            <Route exact path="/" />
+            </header>
       </NavBg>
 
       <body className="App-body">
+      <Route path="/Login" render={props => <LoginForm {...props} />} />
+      <Route path="/About" render={props => <About {...props} />} />
+
         <WelcomePage />
         <Route path="/accessories" component={Accessories} />
       </body>
     </div>
-  )
+  );
 }
 
 export default App;

@@ -4,7 +4,7 @@
 }
 
 .App-body {
-  background-color: #2589BD;
+  background-color: #2589bd;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
 }
 
 .App-link {
-  color: #55DDE0;
+  color: #55dde0;
 }
 
 .App-header {
@@ -25,6 +25,7 @@
 }
 
 .search-button {
+<<<<<<< HEAD
     color: black;
     font-size: 1em;
     margin: 1em;
@@ -33,19 +34,55 @@
     border-radius: 3px;
     background: #fefefe;
     margin-left: 0.1em;
+=======
+  color: black;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid #33658a;
+  border-radius: 3px;
+  background: #2589bd;
+  margin-left: 0.1em;
+>>>>>>> 7edb984563b7efdf76ac082bab361c4d853532b7
 }
 
 .search-field {
-    color: black;
-    font-size: 1em;
-    margin: 1em;
-    padding: 0.25em 1em;
-    border: 2px solid #33658A;
-    border-radius: 3px;
-    margin-right: 0;
+  color: black;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid #33658a;
+  border-radius: 3px;
+  margin-right: 0;
 }
 .NavLink {
-  color: #E8C547;
+  color: #e8c547;
   padding: 20px;
   font-size: 20px;
-  align-self: center;}
+  align-self: center;
+}
+.Form {
+  background-color: white;
+  margin-top: 20px;
+  height: 300px;
+  width: 400px;
+  border-radius: 15px;
+  padding: 20px;
+  padding-top: 40px;
+}
+.Field {
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  font-size: 14px;
+}
+.button {
+  border-radius: 10px;
+  margin: auto;
+  padding: 20px;
+  font-weight: bold;
+}
