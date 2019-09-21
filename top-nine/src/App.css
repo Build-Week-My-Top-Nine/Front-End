@@ -25,16 +25,6 @@
 }
 
 .search-button {
-<<<<<<< HEAD
-    color: black;
-    font-size: 1em;
-    margin: 1em;
-    padding: 0.25em 1em;
-    border: 2px solid #33658A;
-    border-radius: 3px;
-    background: #fefefe;
-    margin-left: 0.1em;
-=======
   color: black;
   font-size: 1em;
   margin: 1em;
@@ -43,7 +33,6 @@
   border-radius: 3px;
   background: #2589bd;
   margin-left: 0.1em;
->>>>>>> 7edb984563b7efdf76ac082bab361c4d853532b7
 }
 
 .search-field {

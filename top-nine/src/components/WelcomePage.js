@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-import { Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Form, Field, withFormik } from 'formik';
 
 import Accessories from './categories/accessories/AccessoriesCard'
@@ -54,17 +53,3 @@ export default withFormik({
         }
     }
 })(WelcomePage)
-=======
-import React from 'react';
-
-function About (props) {
-    return (
-        <div>
-            <h1>
-                Welcome Page! 
-            </h1>
-        </div>
-    )
-}
-export default About;
->>>>>>> 7edb984563b7efdf76ac082bab361c4d853532b7
