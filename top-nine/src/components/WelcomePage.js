@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Form, Field, withFormik } from 'formik';
 import styled from 'styled-components';
 
@@ -8,7 +8,7 @@ import Accessories from './categories/accessories/AccessoriesCard'
 const UserSideDiv = styled.div`
     text-align: left;
     width: 30%;
-    margin: 10px;
+    margin: 2rem;
 `
 
 function WelcomePage(props) {
@@ -27,10 +27,10 @@ function WelcomePage(props) {
                 <h2>User Name</h2>
             </UserSideDiv>
             <div className="user-cat">
-                <Form>
-                    <Field component="select" name="user-active-cat" className="cat-select">
+                <Form className="cat-select">
+                    <Field component="select" name="user-active-cat">
                         <option value="" disabled>My Top Nine:</option>
-                        <option value="accessories">Accessories</option>
+                        <option value="accessories" onClick={<Link to="/accessories" />}>Accessories</option>
                         <option value="animals">Animals</option>
                         <option value="boardgames">Board Games</option>
                         <option value="books">Books</option>
@@ -41,7 +41,7 @@ function WelcomePage(props) {
                         <option value="places">Places</option>
                         <option value="videogames">Video Games</option>
                     </Field>
-                </Form>
+                </Form>            
             </div>
         </section>
     )

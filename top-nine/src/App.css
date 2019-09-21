@@ -2,7 +2,6 @@
   text-align: center;
   font-family: Verdana, Geneva, sans-serif;
   margin: 0 auto;
-  width: 75%;
 }
 
 .App-body {
@@ -95,4 +94,9 @@
 .user-topnine {
   width: 100%;
   display: flex;
+}
+
+.cat-select {
+  height: 2rem;
+  margin-left: 28rem;
 }

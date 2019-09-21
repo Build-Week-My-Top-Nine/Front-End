@@ -5,10 +5,19 @@ import styled from "styled-components";
 import LoginForm from "./components/LogInPage";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import About from './components/WelcomePage'
-import WelcomePage from './components/WelcomePage'
-import Accessories from './components/categories/accessories/AccessoriesCard'
 import Nav from './components/Nav'
 
+import WelcomePage from './components/WelcomePage'
+import Accessories from './components/categories/accessories/AccessoriesCard'
+import Animal from './components/categories/animals/AnimalCard'
+import BoardGame from './components/categories/boardgames/BoardGameCard'
+import Book from './components/categories/books/BookCard'
+import Car from './components/categories/cars/CarCard'
+import Food from './components/categories/food/FoodCard'
+import Movie from './components/categories/movies/MovieCard'
+import Music from './components/categories/music/MusicCard'
+import Places from './components/categories/places/PlaceCard'
+import VideoGame from './components/categories/videogames/VideoGameCard'
 
 const NavBg = styled.header`
   background-color: #33658a;
@@ -27,7 +36,7 @@ function App() {
         <header className="App-header">
           <LogoH1>TopNine</LogoH1>
           <SearchForm />
-            <Nav />
+          <Nav />
         </header>
       </NavBg>
 
@@ -35,6 +44,16 @@ function App() {
       <Route path="/Login" render={props => <LoginForm {...props} />} />
       <Route path="/About" render={props => <About {...props} />} />
       <Route exact path="/" component={WelcomePage} />
+      <Route path="/accessories" component={Accessories} />
+      <Route path="/animals" component={Animal} />
+      <Route path="/boardgames" component={BoardGame} />
+      <Route path="/books" component={Book} />
+      <Route path="/car" component={Car} />
+      <Route path="/food" component={Food} />
+      <Route path="/movie" component={Movie} />
+      <Route path="/music" component={Music} />
+      <Route path="/places" component={Places} />
+      <Route path="/videogame" component={VideoGame} />
       </body>
     </div>
   );
