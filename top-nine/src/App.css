@@ -4,7 +4,7 @@
 }
 
 .App-body {
-  background-color: #2589BD;
+  background-color: #2589bd;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
 }
 
 .App-link {
-  color: #55DDE0;
+  color: #55dde0;
 }
 
 .App-header {
@@ -25,27 +25,27 @@
 }
 
 .search-button {
-    color: black;
-    font-size: 1em;
-    margin: 1em;
-    padding: 0.25em 1em;
-    border: 2px solid #33658A;
-    border-radius: 3px;
-    background: #2589BD;
-    margin-left: 0.1em;
+  color: black;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid #33658a;
+  border-radius: 3px;
+  background: #2589bd;
+  margin-left: 0.1em;
 }
 
 .search-field {
-    color: black;
-    font-size: 1em;
-    margin: 1em;
-    padding: 0.25em 1em;
-    border: 2px solid #33658A;
-    border-radius: 3px;
-    margin-right: 0;
+  color: black;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid #33658a;
+  border-radius: 3px;
+  margin-right: 0;
 }
 .NavLink {
-  color: #E8C547;
+  color: #e8c547;
   padding: 20px;
   font-size: 20px;
   align-self: center;
@@ -69,9 +69,9 @@
   width: 300px;
   font-size: 14px;
 }
- .button {
+.button {
   border-radius: 10px;
   margin: auto;
   padding: 20px;
   font-weight: bold;
-} 
+}

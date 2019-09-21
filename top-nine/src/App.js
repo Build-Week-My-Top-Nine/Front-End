@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
 import SearchForm from "./components/SearchForm";
-import NavBar from "./components/Nav";
-import Login from "./components/LogInPage";
 import styled from "styled-components";
 import LoginForm from "./components/LogInPage";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import About from './components/WelcomePage'
+
 
 const NavBg = styled.header`
   background-color: #33658a;
@@ -19,23 +19,20 @@ function App() {
         <header className="App-header">
           <h1>TopNine</h1>
           <SearchForm />
-          <NavBar />
-          <Router>
-            <NavLink className="NavLink" exact to="/LoginPage">
+            <NavLink className="NavLink" to="/Login">
               Login
             </NavLink>
-            <NavLink className="NavLink" to="/AboutPage">
+            <NavLink className="NavLink" to="/About">
               About
             </NavLink>
-            <Route exact path="/WelcomePage" />
-
-            <Route path="/AboutPage" />
-          </Router>
-        </header>
+            <Route exact path="/" />
+            </header>
       </NavBg>
 
       <body className="App-body">
-        <Route path="/LoginPage" render={props => <LoginForm {...props} />} />
+      <Route path="/Login" render={props => <LoginForm {...props} />} />
+      <Route path="/About" render={props => <About {...props} />} />
+
       </body>
     </div>
   );
