@@ -1,8 +1,12 @@
 import React from 'react';
 import './App.css';
-import SearchForm from './components/SearchForm';
-import NavBar from './components/Nav'
 import styled from "styled-components";
+import { Route } from 'react-router-dom';
+
+import NavBar from './components/Nav'
+import SearchForm from './components/SearchForm';
+import WelcomePage from './components/WelcomePage';
+import Accessories from './components/categories/accessories/AccessoriesCard'
 
 const NavBg = styled.header`
   background-color: #33658A;
@@ -18,9 +22,11 @@ function App() {
         <SearchForm />
         <NavBar />
         </header>
-        </NavBg>
-        <body className="App-body">
+      </NavBg>
 
+      <body className="App-body">
+        <WelcomePage />
+        <Route path="/accessories" component={Accessories} />
       </body>
     </div>
   )
