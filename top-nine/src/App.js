@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import About from './components/WelcomePage'
 import WelcomePage from './components/WelcomePage'
 import Accessories from './components/categories/accessories/AccessoriesCard'
+import Nav from './components/Nav'
 
 
 const NavBg = styled.header`
@@ -14,23 +15,20 @@ const NavBg = styled.header`
   height: 90px;
 `;
 
+const LogoH1 = styled.h1`
+  color: white;
+  margin: 1rem;
+`
+
 function App() {
   return (
     <div className="App">
       <NavBg>
         <header className="App-header">
-          <h1>TopNine</h1>
+          <LogoH1>TopNine</LogoH1>
           <SearchForm />
-            <NavLink className="NavLink" to="/">
-              Home
-            </NavLink>
-            <NavLink className="NavLink" to="/About">
-              About
-            </NavLink>
-            <NavLink className="NavLink" to="/Login">
-              Login
-            </NavLink>
-            </header>
+            <Nav />
+        </header>
       </NavBg>
 
       <body className="App-body">

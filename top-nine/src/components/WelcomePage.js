@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Form, Field, withFormik } from 'formik';
+import styled from 'styled-components';
 
 import Accessories from './categories/accessories/AccessoriesCard'
+
+const UserSideDiv = styled.div`
+    text-align: left;
+    width: 30%;
+    margin: 10px;
+`
 
 function WelcomePage(props) {
     console.log(props, "Props")
@@ -15,7 +22,10 @@ function WelcomePage(props) {
 
     return (
         <section className="user-topnine">
-            <div className="user-sidebar"></div>
+            <UserSideDiv className="user-sidebar">
+                <h1>User IMG Placeholder</h1>
+                <h2>User Name</h2>
+            </UserSideDiv>
             <div className="user-cat">
                 <Form>
                     <Field component="select" name="user-active-cat" className="cat-select">

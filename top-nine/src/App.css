@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   font-family: Verdana, Geneva, sans-serif;
+  margin: 0 auto;
+  width: 75%;
 }
 
 .App-body {
@@ -43,13 +45,14 @@
   border: 2px solid #33658a;
   border-radius: 3px;
   margin-right: 0;
+  width: 13rem;
 }
-.NavLink {
-  color: #e8c547;
-  padding: 20px;
-  font-size: 20px;
-  align-self: center;
+
+.searchform {
+  width: 60rem;
+  margin-top: 1rem;
 }
+
 .Form {
   background-color: white;
   margin-top: 20px;
@@ -59,6 +62,19 @@
   padding: 20px;
   padding-top: 40px;
 }
+
+.Nav {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.NavLink {
+  color: #e8c547;
+  padding: 20px;
+  font-size: 20px;
+  align-self: center;
+}
+
 .Field {
   margin: auto;
   margin-top: 15px;
@@ -74,4 +90,9 @@
   margin: auto;
   padding: 20px;
   font-weight: bold;
+}
+
+.user-topnine {
+  width: 100%;
+  display: flex;
 }

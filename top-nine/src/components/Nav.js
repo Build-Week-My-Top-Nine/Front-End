@@ -1,12 +1,9 @@
-import React from 'react';
-import { Route } from 'react-router-dom'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-export default function Nav() {
+export default function Nav(){
     return (
-        <NavBg>
-        <header className="App-header">
-          <h1>TopNine</h1>
-          <SearchForm />
+        <div className="Nav">
             <NavLink className="NavLink" to="/">
               Home
             </NavLink>
@@ -16,7 +13,6 @@ export default function Nav() {
             <NavLink className="NavLink" to="/Login">
               Login
             </NavLink>
-            </header>
-        </NavBg>
+        </div>
     )
 }
