@@ -30,7 +30,7 @@ function WelcomePage(props) {
     //   };
 
     return (
-        <div className="welcome">
+        <div class="welcome">
             <div className="user-topnine">
                 <div className="user-cat">
                         <p>My Top Nine:</p>
