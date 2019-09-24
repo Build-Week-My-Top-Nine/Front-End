@@ -1,7 +1,5 @@
 import React from 'react';
-import Food from './FoodCard'
-import {Form} from 'formik'
-
+import {Form} from 'formik';
 
 export default function FoodList(props) {
     return (

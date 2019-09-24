@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import { Form, Field, withFormik } from 'formik';
 import { Button } from 'reactstrap';
+
 
 
 function SearchForm() {

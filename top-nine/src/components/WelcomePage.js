@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Form, Field, withFormik } from 'formik';
 import styled from 'styled-components';
 import axios from 'axios';
 
@@ -13,7 +12,9 @@ const UserSideDiv = styled.div`
     text-align: left;
     width: 25%;
     margin: 2rem;
-    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
 `
 
 const UserCatBody = styled.div`
@@ -21,7 +22,11 @@ const UserCatBody = styled.div`
     border-radius: 2rem;
     color: orange;
     height: 20rem;
-    width: 75%
+    width: 60%;
+    margin: 1rem;
+    margin-left: 22rem;
+    position: absolute;
+    top: 30%;
 `
 
   //   };
@@ -40,12 +45,6 @@ const UserCatBody = styled.div`
 
   return (
     <div className="App">
-      <img className="userPic" src={img} alt="user img" />
-      <h2 user={user.UserName}></h2>
-
-      <h1>Accessories</h1>
-
-        <div className="welcome">
             <div className="user-topnine">
                 <div className="user-cat">
                         <p>My Top Nine:</p>
@@ -61,29 +60,29 @@ const UserCatBody = styled.div`
                         <NavLink className="usernav" to='/videogame'>Video Games</NavLink>      
             </div>
             <UserSideDiv className="user-sidebar">
-                <h1>User IMG Placeholder</h1>
-                <h2>User Name</h2>
+            <img className="userPic" src={img} alt="user img" />
+            <h2 user={user.UserName}>{user.UserName || 'User Name'}</h2>
             </UserSideDiv>
+            <UserCatBody>THIS IS A TEXT</UserCatBody>
+
+            <section className="other-user-topnine">
+                <div className="other-user-cat">
+                    <p>Their Top Nine:</p>
+                    <NavLink className="usernav" to='/accessories/:id'>Accessories</NavLink>
+                    <NavLink className="usernav" to='/animals/:id'>Animals</NavLink>
+                    <NavLink className="usernav" to='/boardgames/:id'>Board Games</NavLink>
+                    <NavLink className="usernav" to='/books/:id'>Books</NavLink>
+                    <NavLink className="usernav" to='/car/:id'>Cars</NavLink>
+                    <NavLink className="usernav" to='/food/:id'>Food</NavLink>
+                    <NavLink className="usernav" to='/movies/:id'>Movies</NavLink>
+                    <NavLink className="usernav" to='/music/:id'>Music</NavLink>
+                    <NavLink className="usernav" to='/places/:id'>Places</NavLink>
+                    <NavLink className="usernav" to='/videogame/:id'>Video Games</NavLink>      
             
+                </div>
+            </section>
         </div>
 
-        <section className="other-user-topnine">
-            <div className="other-user-cat">
-                        <p>Their Top Nine:</p>
-                        <NavLink className="usernav" to='/accessories/:id'>Accessories</NavLink>
-                        <NavLink className="usernav" to='/animals/:id'>Animals</NavLink>
-                        <NavLink className="usernav" to='/boardgames/:id'>Board Games</NavLink>
-                        <NavLink className="usernav" to='/books/:id'>Books</NavLink>
-                        <NavLink className="usernav" to='/car/:id'>Cars</NavLink>
-                        <NavLink className="usernav" to='/food/:id'>Food</NavLink>
-                        <NavLink className="usernav" to='/movies/:id'>Movies</NavLink>
-                        <NavLink className="usernav" to='/music/:id'>Music</NavLink>
-                        <NavLink className="usernav" to='/places/:id'>Places</NavLink>
-                        <NavLink className="usernav" to='/videogame/:id'>Video Games</NavLink>      
-            
-            </div>
-            </section>
-</div>
         </div>
     )
 }

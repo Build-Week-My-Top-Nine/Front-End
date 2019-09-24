@@ -2,17 +2,19 @@
   text-align: center;
   font-family: Verdana, Geneva, sans-serif;
   margin: 0 auto;
+  min-height: 50rem;
 }
 
 .App-body {
   background-color: #2589bd;
-  min-height: 100vh;
+  min-height: 100rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin: 1 auto;
 }
 
 .App-link {
@@ -23,6 +25,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+img {
+  border-radius: 2rem;
 }
 
 .search-button {
@@ -94,7 +100,7 @@
 
 .user-topnine {
   width: 100%;
-  height: 20rem;
+  height: 28rem;
 }
 
 .cat-select {
@@ -109,6 +115,10 @@
   margin: 0.1rem;
   padding: 0.2rem;
   padding-left: 9rem;
+}
+
+.other-user-topnine {
+  height: 28rem;
 }
 
 .other-user-cat {
