@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Form, Field, withFormik } from 'formik';
 import styled from 'styled-components';
 
@@ -7,8 +7,17 @@ import Accessories from './categories/accessories/AccessoriesCard'
 
 const UserSideDiv = styled.div`
     text-align: left;
-    width: 30%;
+    width: 25%;
     margin: 2rem;
+    margin-right: 0;
+`
+
+const UserCatBody = styled.div`
+    background-color: white;
+    border-radius: 2rem;
+    color: orange;
+    height: 20rem;
+    width: 75%
 `
 
 function WelcomePage(props) {
@@ -21,45 +30,45 @@ function WelcomePage(props) {
     //   };
 
     return (
-        <section className="user-topnine">
+        <div className="welcome">
+            <div className="user-topnine">
+                <div className="user-cat">
+                        <p>My Top Nine:</p>
+                        <NavLink className="usernav" to='/accessories'>Accessories</NavLink>
+                        <NavLink className="usernav" to='/animals'>Animals</NavLink>
+                        <NavLink className="usernav" to='/boardgames'>Board Games</NavLink>
+                        <NavLink className="usernav" to='/books'>Books</NavLink>
+                        <NavLink className="usernav" to='/car'>Cars</NavLink>
+                        <NavLink className="usernav" to='/food'>Food</NavLink>
+                        <NavLink className="usernav" to='/movies'>Movies</NavLink>
+                        <NavLink className="usernav" to='/music'>Music</NavLink>
+                        <NavLink className="usernav" to='/places'>Places</NavLink>
+                        <NavLink className="usernav" to='/videogame'>Video Games</NavLink>      
+            </div>
             <UserSideDiv className="user-sidebar">
                 <h1>User IMG Placeholder</h1>
                 <h2>User Name</h2>
             </UserSideDiv>
-            <div className="user-cat">
-                <Form className="cat-select">
-                    <Field component="select" name="user-active-cat">
-                        <option value="" disabled>My Top Nine:</option>
-                        <option value="accessories" onClick={<Link to="/accessories" />}>Accessories</option>
-                        <option value="animals">Animals</option>
-                        <option value="boardgames">Board Games</option>
-                        <option value="books">Books</option>
-                        <option value="cars">Cars</option>
-                        <option value="food">Food</option>
-                        <option value="movies">Movies</option>
-                        <option value="music">Music</option>
-                        <option value="places">Places</option>
-                        <option value="videogames">Video Games</option>
-                    </Field>
-                </Form>            
+            
+        </div>
+
+        <section className="other-user-topnine">
+            <div className="other-user-cat">
+                        <p>Their Top Nine:</p>
+                        <NavLink className="usernav" to='/accessories/:id'>Accessories</NavLink>
+                        <NavLink className="usernav" to='/animals/:id'>Animals</NavLink>
+                        <NavLink className="usernav" to='/boardgames/:id'>Board Games</NavLink>
+                        <NavLink className="usernav" to='/books/:id'>Books</NavLink>
+                        <NavLink className="usernav" to='/car/:id'>Cars</NavLink>
+                        <NavLink className="usernav" to='/food/:id'>Food</NavLink>
+                        <NavLink className="usernav" to='/movies/:id'>Movies</NavLink>
+                        <NavLink className="usernav" to='/music/:id'>Music</NavLink>
+                        <NavLink className="usernav" to='/places/:id'>Places</NavLink>
+                        <NavLink className="usernav" to='/videogame/:id'>Video Games</NavLink>      
             </div>
         </section>
+        </div>
     )
 }
 
-export default withFormik({
-    myPropsToValues: (values) => {
-        return {
-            accessories: values.accessories || '',
-            animals: values.animals || '',
-            boardgames: values.boardgames || '',
-            books: values.books || '',
-            cars: values.cars || '',
-            food: values.food || '',
-            movies: values.movies || '',
-            music: values.music || '',
-            places: values.places || '',
-            videogames: values.videogames || ''
-        }
-    }
-})(WelcomePage)
+export default WelcomePage;
