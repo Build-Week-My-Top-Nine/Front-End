@@ -35,8 +35,8 @@ function App() {
       <NavBg>
         <header className="App-header">
           <LogoH1>TopNine</LogoH1>
-          <SearchForm />
           <Nav />
+          <SearchForm />
         </header>
       </NavBg>
 
