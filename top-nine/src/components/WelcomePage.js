@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Form, Field, withFormik } from 'formik';
 import styled from 'styled-components';
 import axios from 'axios';
 
@@ -15,6 +14,7 @@ const UserSideDiv = styled.div`
     margin: 2rem;
     display: flex;
     flex-direction: column;
+    margin: 2rem;
 `
 
 const UserCatBody = styled.div`
@@ -22,9 +22,9 @@ const UserCatBody = styled.div`
     border-radius: 2rem;
     color: orange;
     height: 20rem;
-    width: 69%;
+    width: 60%;
     margin: 1rem;
-    margin-left: 20rem;
+    margin-left: 22rem;
     position: absolute;
     top: 30%;
 `

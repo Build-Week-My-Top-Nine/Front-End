@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import SearchForm from "./components/SearchForm";
+import SearchForm from "./components/search/SearchForm";
 import styled from "styled-components";
 import LoginForm from "./components/LogInPage";
 import { Route } from "react-router-dom";
