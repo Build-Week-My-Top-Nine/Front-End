@@ -3,7 +3,7 @@ import "./App.css";
 import SearchForm from "./components/SearchForm";
 import styled from "styled-components";
 import LoginForm from "./components/LogInPage";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { Route } from "react-router-dom";
 import About from './components/WelcomePage'
 import Nav from './components/Nav'
 
@@ -41,19 +41,20 @@ function App() {
       </NavBg>
 
       <body className="App-body">
+      <Route exact path="/" component={WelcomePage} />
       <Route path="/Login" render={props => <LoginForm {...props} />} />
       <Route path="/About" render={props => <About {...props} />} />
-      <Route exact path="/" component={WelcomePage} />
       <Route path="/accessories" component={Accessories} />
       <Route path="/animals" component={Animal} />
       <Route path="/boardgames" component={BoardGame} />
       <Route path="/books" component={Book} />
       <Route path="/car" component={Car} />
-      <Route path="/food" component={Food} />
+      <Route path="/food"  component={Food} />
       <Route path="/movie" component={Movie} />
       <Route path="/music" component={Music} />
       <Route path="/places" component={Places} />
       <Route path="/videogame" component={VideoGame} />
+      <Food/>
       </body>
     </div>
   );

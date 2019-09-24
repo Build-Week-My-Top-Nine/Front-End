@@ -98,5 +98,11 @@
 
 .cat-select {
   height: 2rem;
-  margin-left: 28rem;
+  margin-left: 110px;
+}
+.userPic {
+  margin-top: 10px;
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
 }
