@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import FoodList from './FoodList'
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 
 
@@ -16,12 +17,13 @@ function Food(props) {
   console.log(catagory);
 return (
     <div>
+        <h1>Food</h1>
         {catagory.map(cat => {
             console.log(cat);
-            return <h1>{cat.Category}</h1> 
+            return <h1 key={cat.id}>{cat.Category}</h1> 
         })}
-        <h1>Food</h1>
         <FoodList />
+        <Link to="/"><h6>Back</h6></Link>
     </div>
 )
 }

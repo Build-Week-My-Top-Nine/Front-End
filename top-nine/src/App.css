@@ -91,18 +91,40 @@
   font-weight: bold;
 }
 
+
 .user-topnine {
   width: 100%;
-  display: flex;
+  height: 20rem;
 }
 
 .cat-select {
   height: 2rem;
-  margin-left: 110px;
+  margin-left: 28rem;
 }
-.userPic {
-  margin-top: 10px;
-  width: 180px;
-  height: 180px;
-  border-radius: 10px;
+
+.user-cat {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  margin: 0.1rem;
+  padding: 0.2rem;
+  padding-left: 9rem;
+}
+
+.other-user-cat {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  margin: 0.1rem;
+  padding: 0.2rem;
+  margin-left: 8rem;
+}
+
+.usernav {
+  padding: 0.8rem;
+  height: 1.2rem;
+}
+
+.welcome {
+  height: 100%;
 }

@@ -40,7 +40,7 @@ function App() {
         </header>
       </NavBg>
 
-      <body className="App-body">
+      <div className="App-body">
       <Route exact path="/" component={WelcomePage} />
       <Route path="/Login" render={props => <LoginForm {...props} />} />
       <Route path="/About" render={props => <About {...props} />} />
@@ -54,8 +54,8 @@ function App() {
       <Route path="/music" component={Music} />
       <Route path="/places" component={Places} />
       <Route path="/videogame" component={VideoGame} />
-      <Food/>
-      </body>
+      {/* <Food key={Food} /> */}
+      </div>
     </div>
   );
 }
