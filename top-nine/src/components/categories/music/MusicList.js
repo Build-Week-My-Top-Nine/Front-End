@@ -1,46 +1,78 @@
-import React from 'react';
-import {Form} from 'formik'
+import React, { useState } from "react";
+import { Form } from "formik";
 
 export default function MusicList(props) {
-    return (
-        <Form>
-        <h3>Music List</h3>
-        <label>
-            <input type="radio" value="Alternative"></input>
-            Alternative
-        </label>
-        <label>
-            <input type="radio" value="Hip Hop"></input>
-            Hip Hop
-        </label>
-        <label>
-            <input type="radio" value="Rap"></input>
-            Rap
-        </label>
-        <label>
-            <input type="radio" value="Rock"></input>
-            Rock
-        </label>
-        <label>
-            <input type="radio" value="Metal"></input>
-            Metal
-        </label>
-        <label>
-            <input type="radio" value="Oldies"></input>
-            Oldies
-        </label>
-        <label>
-            <input type="radio" value="Punk"></input>
-            Punk
-        </label>
-        <label>
-            <input type="radio" value="Classic Rock"></input>
-            Classic Rock
-        </label>
-        <label>
-            <input type="radio" value="Blues"></input>
-            Blues
-        </label>
+  const [rememberMe, setRememberMe] = useState(false);
+  const handleChange = e => {
+    setRememberMe(!rememberMe);
+  };
+  console.log(rememberMe);
+  return (
+    <Form onChange={handleChange}>
+      <h3>Music List</h3>
+      <label>
+        <input
+          type="checkbox"
+          onChange={e => setRememberMe(e.target.value)}
+        ></input>
+        Alternative
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          onChange={e => setRememberMe(e.target.value)}
+        ></input>
+        Hip Hop
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          onChange={e => setRememberMe(e.target.value)}
+        ></input>
+        Rap
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          onChange={e => setRememberMe(e.target.value)}
+        ></input>
+        Rock
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          onChange={e => setRememberMe(e.target.value)}
+        ></input>
+        Metal
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          onChange={e => setRememberMe(e.target.value)}
+        ></input>
+        Oldies
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          onChange={e => setRememberMe(e.target.value)}
+        ></input>
+        Punk
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          onChange={e => setRememberMe(e.target.value)}
+        ></input>
+        Classic Rock
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          onChange={e => setRememberMe(e.target.value)}
+        ></input>
+        Blues
+      </label>
     </Form>
-    )
+  );
 }

@@ -50,11 +50,10 @@ function App() {
       <Route path="/books" component={Book} />
       <Route path="/car" component={Car} />
       <Route path="/food"  component={Food} />
-      <Route path="/movie" component={Movie} />
+      <Route path="/movies"  component={Movie} />
       <Route path="/music" component={Music} />
       <Route path="/places" component={Places} />
       <Route path="/videogame" component={VideoGame} />
-      {/* <Food key={Food} /> */}
       </div>
     </div>
   );

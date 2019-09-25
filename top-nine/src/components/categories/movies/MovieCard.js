@@ -3,6 +3,7 @@ import MovieList from './MovieList'
 import { Link } from 'react-router-dom'
 
 function Movie(props) {
+    console.log("something")
 return (
     <div>
         <h1>Movie</h1>
