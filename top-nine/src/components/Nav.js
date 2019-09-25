@@ -10,7 +10,7 @@ export default function Nav(){
             <NavLink className="NavLink" to="/About">
               About
             </NavLink>
-            <NavLink className="NavLink" to="/Login">
+            <NavLink className="NavLink" to="/login">
               Login
             </NavLink>
         </div>

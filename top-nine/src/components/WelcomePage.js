@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import axios from 'axios';
-
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import axios from "axios";
 
 function WelcomePage(props) {
   console.log(props, "Props");
   // const [category, newCategory] = useState();
 
-const UserSideDiv = styled.div`
+  const UserSideDiv = styled.div`
     text-align: left;
     width: 25%;
     margin: 2rem;
     display: flex;
     flex-direction: column;
     margin: 2rem;
-`
+  `;
 
-const UserCatBody = styled.div`
+  const UserCatBody = styled.div`
     background-color: white;
     border-radius: 2rem;
     color: orange;
@@ -27,7 +26,7 @@ const UserCatBody = styled.div`
     margin-left: 22rem;
     position: absolute;
     top: 30%;
-`
+  `;
 
   //   };
 
@@ -36,6 +35,7 @@ const UserCatBody = styled.div`
 
   const [user, setUser] = useState([]);
 
+  
   useEffect(() => {
     axios.get("https://mytopnineapi.herokuapp.com/api/topnine").then(res => {
       setUser(res.data);
@@ -45,46 +45,84 @@ const UserCatBody = styled.div`
 
   return (
     <div className="App">
-            <div className="user-topnine">
-                <div className="user-cat">
-                        <p>My Top Nine:</p>
-                        <NavLink className="usernav" to='/accessories'>Accessories</NavLink>
-                        <NavLink className="usernav" to='/animals'>Animals</NavLink>
-                        <NavLink className="usernav" to='/boardgames'>Board Games</NavLink>
-                        <NavLink className="usernav" to='/books'>Books</NavLink>
-                        <NavLink className="usernav" to='/car'>Cars</NavLink>
-                        <NavLink className="usernav" to='/food'>Food</NavLink>
-                        <NavLink className="usernav" to='/movies'>Movies</NavLink>
-                        <NavLink className="usernav" to='/music'>Music</NavLink>
-                        <NavLink className="usernav" to='/places'>Places</NavLink>
-                        <NavLink className="usernav" to='/videogame'>Video Games</NavLink>      
-            </div>
-            <UserSideDiv className="user-sidebar">
-            <img className="userPic" src={img} alt="user img" />
-            <h2 user={user.UserName}>{user.UserName || 'User Name'}</h2>
-            </UserSideDiv>
-            <UserCatBody>THIS IS A TEXT</UserCatBody>
-
-            <section className="other-user-topnine">
-                <div className="other-user-cat">
-                    <p>Their Top Nine:</p>
-                    <NavLink className="usernav" to='/accessories/:id'>Accessories</NavLink>
-                    <NavLink className="usernav" to='/animals/:id'>Animals</NavLink>
-                    <NavLink className="usernav" to='/boardgames/:id'>Board Games</NavLink>
-                    <NavLink className="usernav" to='/books/:id'>Books</NavLink>
-                    <NavLink className="usernav" to='/car/:id'>Cars</NavLink>
-                    <NavLink className="usernav" to='/food/:id'>Food</NavLink>
-                    <NavLink className="usernav" to='/movies/:id'>Movies</NavLink>
-                    <NavLink className="usernav" to='/music/:id'>Music</NavLink>
-                    <NavLink className="usernav" to='/places/:id'>Places</NavLink>
-                    <NavLink className="usernav" to='/videogame/:id'>Video Games</NavLink>      
-            
-                </div>
-            </section>
+      <div className="user-topnine">
+        <div className="user-cat">
+          <p>My Top Nine:</p>
+          <NavLink className="usernav" to="/accessories">
+            Accessories
+          </NavLink>
+          <NavLink className="usernav" to="/animals">
+            Animals
+          </NavLink>
+          <NavLink className="usernav" to="/boardgames">
+            Board Games
+          </NavLink>
+          <NavLink className="usernav" to="/books">
+            Books
+          </NavLink>
+          <NavLink className="usernav" to="/car">
+            Cars
+          </NavLink>
+          <NavLink className="usernav" to="/food">
+            Food
+          </NavLink>
+          <NavLink className="usernav" to="/movies">
+            Movies
+          </NavLink>
+          <NavLink className="usernav" to="/music">
+            Music
+          </NavLink>
+          <NavLink className="usernav" to="/places">
+            Places
+          </NavLink>
+          <NavLink className="usernav" to="/videogame">
+            Video Games
+          </NavLink>
         </div>
+        <UserSideDiv className="user-sidebar">
+          <img className="userPic" src={img} alt="user img" />
+          <h2 user={user.UserName}>{user.UserName || "User Name"}</h2>
+        </UserSideDiv>
+        <UserCatBody>THIS IS A TEXT</UserCatBody>
 
-        </div>
-    )
+        <section className="other-user-topnine">
+          <div className="other-user-cat">
+            <p>Their Top Nine:</p>
+            <NavLink className="usernav" to="/accessories/:id">
+              Accessories
+            </NavLink>
+            <NavLink className="usernav" to="/animals/:id">
+              Animals
+            </NavLink>
+            <NavLink className="usernav" to="/boardgames/:id">
+              Board Games
+            </NavLink>
+            <NavLink className="usernav" to="/books/:id">
+              Books
+            </NavLink>
+            <NavLink className="usernav" to="/car/:id">
+              Cars
+            </NavLink>
+            <NavLink className="usernav" to="/food/:id">
+              Food
+            </NavLink>
+            <NavLink className="usernav" to="/movies/:id">
+              Movies
+            </NavLink>
+            <NavLink className="usernav" to="/music/:id">
+              Music
+            </NavLink>
+            <NavLink className="usernav" to="/places/:id">
+              Places
+            </NavLink>
+            <NavLink className="usernav" to="/videogame/:id">
+              Video Games
+            </NavLink>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
 }
 
 export default WelcomePage;
