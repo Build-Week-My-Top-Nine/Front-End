@@ -138,3 +138,7 @@ img {
 .welcome {
   height: 100%;
 }
+
+.searchitems {
+  display: none;
+}
