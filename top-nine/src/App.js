@@ -48,12 +48,12 @@ function App() {
       <Route path="/animals" component={Animal} />
       <Route path="/boardgames" component={BoardGame} />
       <Route path="/books" component={Book} />
-      <Route path="/car" component={Car} />
+      <Route path="/cars" component={Car} />
       <Route path="/food"  component={Food} />
       <Route path="/movies"  component={Movie} />
       <Route path="/music" component={Music} />
       <Route path="/places" component={Places} />
-      <Route path="/videogame" component={VideoGame} />
+      <Route path="/videogames" component={VideoGame} />
       </div>
     </div>
   );
