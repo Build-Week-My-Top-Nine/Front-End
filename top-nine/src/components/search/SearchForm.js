@@ -2,18 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Form, Field, withFormik } from 'formik';
 import { Button } from 'reactstrap';
 import axios from 'axios';
+import WelcomePage from '../WelcomePage'
 
 
 
-function SearchForm() {
+function SearchForm(props) {
 
-  const [search, setSearchValue] = useState({
-    value: ''
-  })
+  const [items, setItems] = useState([]);
 
-  const [items, setItems] = useState([])
+  const [filteredItems, setFilteredItems] = useState([]);
 
-  const [filteredItems, setFilteredItems] = useState([])
+  console.log(props)
 
   useEffect((props) => {
     axios.get("https://mytopnineapi.herokuapp.com/api/topnine").then(res => {
@@ -36,7 +35,7 @@ function SearchForm() {
     <>
         <Form className="searchform">
             <Field type="text" name="search" placeholder="Search..." className="search-field" onChange={handleChange} />
-            <Button className="search-button">Search</Button>
+            <Button className="def-button">Search</Button>
         </Form>
         {filteredItems.map((item) => (<p class="searchitems">{item.TopNineItem}</p>))}
         </>
