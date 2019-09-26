@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Form, Field, withFormik } from 'formik';
 import { Button } from 'reactstrap';
 import axios from 'axios';
-import WelcomePage from '../WelcomePage'
 
 
 
@@ -30,12 +29,16 @@ function SearchForm(props) {
     })
     setFilteredItems(newItems);
   }
+
+  function handleSubmit(props) {
+    console.log(props.data, "HANDLE PROP DATA");
+  }
   
   return (
     <>
         <Form className="searchform">
             <Field type="text" name="search" placeholder="Search..." className="search-field" onChange={handleChange} />
-            <Button className="def-button">Search</Button>
+            <Button className="def-button" onSubmit={handleSubmit}>Search</Button>
         </Form>
         {filteredItems.map((item) => (<p className="searchitems">{item.TopNineItem}</p>))}
         </>

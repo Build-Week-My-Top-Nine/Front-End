@@ -4,7 +4,6 @@ import SearchForm from "./components/search/SearchForm";
 import styled from "styled-components";
 import LoginForm from "./components/LogInPage";
 import { Route } from "react-router-dom";
-import About from './components/WelcomePage'
 import Nav from './components/Nav'
 
 import WelcomePage from './components/WelcomePage'
