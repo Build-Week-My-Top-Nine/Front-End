@@ -6,7 +6,7 @@ function BoardGame (props) {
 return (
     <div>
         <h1>Board Games</h1>
-        <BGList />
+        <BGList handleChange={props.handleChange} />
         <Link to="/"><h6>Back</h6></Link>
     </div>
 )

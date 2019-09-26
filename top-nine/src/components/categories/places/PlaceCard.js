@@ -6,7 +6,7 @@ function Places(props) {
 return (
     <div>
         <h1>Places</h1>
-        <PlaceList />
+        <PlaceList handleChange={props.handleChange}/>
         <Link to="/"><h6>Back</h6></Link>
     </div>
 )

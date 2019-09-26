@@ -1,17 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form } from "formik";
 
 export default function MovieList(props) {
   const [rememberMe, setRememberMe] = useState(false);
+  const [chosen, setChosen] = useState("");
   const handleChange = e => {
-    setRememberMe(!rememberMe);
+    setRememberMe(e.target.value);
+    setChosen(e.target.name);
   };
-  console.log(rememberMe);
+  useEffect(( )=>{
+    props.handleChange("movies", chosen)
+
+  }, [chosen]);
+
+  console.log(chosen);
   return (
     <Form onChange={handleChange}>
       <h3>Movie List</h3>
       <label>
         <input
+          name="Horror"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

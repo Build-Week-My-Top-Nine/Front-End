@@ -7,7 +7,7 @@ function Movie(props) {
 return (
     <div>
         <h1>Movie</h1>
-        <MovieList />
+        <MovieList handleChange={props.handleChange} />
         <Link to="/"><h6>Back</h6></Link>
     </div>
 )

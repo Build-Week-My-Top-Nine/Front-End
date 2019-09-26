@@ -6,7 +6,7 @@ function Cars(props) {
 return (
     <div>
         <h1>Cars</h1>
-        <CarList />
+        <CarList handleChange={props.handleChange}/>
         <Link to="/"><h6>Back</h6></Link>
     </div>
 )

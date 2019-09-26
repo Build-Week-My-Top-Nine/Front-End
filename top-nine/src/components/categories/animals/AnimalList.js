@@ -1,19 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form } from "formik";
 
 export default function AnimalList(props) {
   const [rememberMe, setRememberMe] = useState(false);
+  const [chosen, setChosen] = useState("");
+
   const handleChange = e => {
-    setRememberMe(!rememberMe);
+    setRememberMe(e.target.value);
+    setChosen(e.target.name);
   };
-  console.log(rememberMe);
+  useEffect(( )=>{
+    props.handleChange("animals", chosen)
+
+  }, [chosen]);
+
+  console.log(chosen);
   return (
-    <Form onChange={handleChange}>
+    <Form>
       <h3>Animal List</h3>
       <label>
         <input
+          name="Cat"
           type="checkbox"
-          onChange={e => setRememberMe(e.target.value)}
+          onChange={handleChange}
+          // onChange={e => setRememberMe(e.target.value)}
         ></input>
         Cat
       </label>

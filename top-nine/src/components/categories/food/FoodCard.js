@@ -22,7 +22,7 @@ return (
             console.log(cat);
             return <h1 key={cat.id}>{cat.Category}</h1> 
         })} */}
-        <FoodList />
+        <FoodList handleChange={props.handleChange} />
         <Link to="/"><h6>Back</h6></Link>
     </div>
 )

@@ -6,7 +6,7 @@ function Book (props) {
 return (
     <div>
         <h1>Book</h1>
-        <BookList />
+        <BookList handleChange={props.handleChange} />
         <Link to="/"><h6>Back</h6></Link>
     </div>
 )

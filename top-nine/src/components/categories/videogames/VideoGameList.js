@@ -1,17 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form } from "formik";
 
 export default function VGList(props) {
   const [rememberMe, setRememberMe] = useState(false);
+  const [chosen, setChosen] = useState("");
   const handleChange = e => {
-    setRememberMe(!rememberMe);
+    setRememberMe(e.target.value);
+    setChosen(e.target.name);
   };
-  console.log(rememberMe);
+  useEffect(( )=>{
+    props.handleChange("videoGames", chosen)
+
+  }, [chosen]);
+
+  console.log(chosen);
   return (
     <Form onChange={handleChange}>
       <h3>Video Games List</h3>
       <label>
         <input
+          name="World of Warcraft"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

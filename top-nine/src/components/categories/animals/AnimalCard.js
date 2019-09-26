@@ -6,7 +6,7 @@ function Animal(props) {
 return (
     <div>
         <h1>Animal</h1>
-        <AnimalList />
+        <AnimalList handleChange={props.handleChange}/>
         <Link to="/"><h6>Back</h6></Link>
     </div>
 )

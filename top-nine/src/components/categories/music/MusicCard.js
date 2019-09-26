@@ -6,7 +6,7 @@ function Music(props) {
 return (
     <div>
         <h1>Music</h1>
-        <MusicList />
+        <MusicList handleChange={props.handleChange} />
         <Link to="/"><h6>Back</h6></Link>
     </div>
 )

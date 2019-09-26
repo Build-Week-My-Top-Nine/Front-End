@@ -31,7 +31,7 @@ img {
   border-radius: 2rem;
 }
 
-.search-button {
+.def-button {
   color: black;
   font-size: 1em;
   margin: 1em;
@@ -137,4 +137,8 @@ img {
 
 .welcome {
   height: 100%;
+}
+
+.searchitems {
+  display: none;
 }

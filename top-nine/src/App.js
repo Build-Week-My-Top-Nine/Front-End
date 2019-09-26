@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 import SearchForm from "./components/search/SearchForm";
 import styled from "styled-components";
@@ -30,6 +30,29 @@ const LogoH1 = styled.h1`
 `
 
 function App() {
+  const [rememberMe, setRememberMe] = useState(false);
+  const [chosenItems, setChosenItems] = useState({
+    animals: "",
+    accessories: "",
+    boardGames: "",
+    books: "",
+    cars: "",
+    food: "",
+    movies: "",
+    music: "",
+    places: "",
+    videoGames: "",
+  });
+  const handleChange = (catagory, item) => {
+    // setRememberMe(!rememberMe);
+    // console.log(catagory, item);
+    setChosenItems({
+      ...chosenItems, 
+     [ catagory ]: item
+    })
+  };
+  
+  console.log(chosenItems);
   return (
     <div className="App">
       <NavBg>
@@ -44,16 +67,16 @@ function App() {
       <Route exact path="/" component={WelcomePage} />
       <Route path="/Login" render={props => <LoginForm {...props} />} />
       <Route path="/About" render={props => <About {...props} />} />
-      <Route path="/accessories" component={Accessories} />
-      <Route path="/animals" component={Animal} />
-      <Route path="/boardgames" component={BoardGame} />
-      <Route path="/books" component={Book} />
-      <Route path="/cars" component={Car} />
-      <Route path="/food"  component={Food} />
-      <Route path="/movies"  component={Movie} />
-      <Route path="/music" component={Music} />
-      <Route path="/places" component={Places} />
-      <Route path="/videogames" component={VideoGame} />
+      <Route path="/accessories" render={props => <Accessories {...props} handleChange={handleChange} />} />
+      <Route path="/animals" render={props => <Animal {...props} handleChange={handleChange} />} />
+      <Route path="/boardgames" render={props => <BoardGame {...props} handleChange={handleChange} />}/>
+      <Route path="/books" render={props => <Book {...props} handleChange={handleChange} />} />
+      <Route path="/cars" render={props => <Car {...props} handleChange={handleChange} />} />
+      <Route path="/food"  render={props => <Food {...props} handleChange={handleChange} />} />
+      <Route path="/movies"  render={props => <Movie {...props} handleChange={handleChange} />} />
+      <Route path="/music" render={props => <Music {...props} handleChange={handleChange} />} />
+      <Route path="/places" render={props => <Places {...props} handleChange={handleChange} />} />
+      <Route path="/videogames" render={props => <VideoGame {...props} handleChange={handleChange} />} />
       </div>
     </div>
   );

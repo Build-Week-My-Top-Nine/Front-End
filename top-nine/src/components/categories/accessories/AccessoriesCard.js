@@ -6,7 +6,7 @@ function Accessories (props) {
     
   return (
     <div className="App">
-        <AccessList />
+        <AccessList handleChange={props.handleChange} />
         <Link to="/"><h6>Back</h6></Link>
     </div>
   );
