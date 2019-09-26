@@ -19,7 +19,7 @@ export default function BGList(props) {
       <h3>Board Game List </h3>
       <label>
         <input
-        name="Monopoly"
+          name="Monopoly"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -27,6 +27,7 @@ export default function BGList(props) {
       </label>
       <label>
         <input
+          name="Scrabble"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -34,6 +35,7 @@ export default function BGList(props) {
       </label>
       <label>
         <input
+          name="Sorry"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -41,6 +43,7 @@ export default function BGList(props) {
       </label>
       <label>
         <input
+          name="Candy Land"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -48,6 +51,7 @@ export default function BGList(props) {
       </label>
       <label>
         <input
+          name="Chess"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -55,6 +59,7 @@ export default function BGList(props) {
       </label>
       <label>
         <input
+          name="Checkers"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -62,6 +67,7 @@ export default function BGList(props) {
       </label>
       <label>
         <input
+          name="Trouble"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -69,6 +75,7 @@ export default function BGList(props) {
       </label>
       <label>
         <input
+          name="Clue"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -76,6 +83,7 @@ export default function BGList(props) {
       </label>
       <label>
         <input
+          name="Life"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

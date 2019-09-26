@@ -1,17 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "formik";
+import axios from "axios";
+
 export default function AccessList(props) {
   const [rememberMe, setRememberMe] = useState(false);
   const [chosen, setChosen] = useState("");
 
   const handleChange = e => {
+    e.preventDefault();
     setRememberMe(e.target.value);
     setChosen(e.target.name);
   };
-  useEffect(( )=>{
-    props.handleChange("accessories", chosen)
+  useEffect(() => {
+    props.handleChange("accessories", chosen);
 
+    axios
+      .post("https://mytopnineapi.herokuapp.com/api/topnine", { setChosen })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log("ERROR", err);
+      });
   }, [chosen]);
+
   console.log(chosen);
   return (
     <Form onChange={handleChange}>
@@ -26,6 +39,7 @@ export default function AccessList(props) {
       </label>
       <label>
         <input
+          name="Sun Glasses"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -33,6 +47,7 @@ export default function AccessList(props) {
       </label>
       <label>
         <input
+          name="Purse"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -40,6 +55,7 @@ export default function AccessList(props) {
       </label>
       <label>
         <input
+          name="Satchel"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -47,6 +63,7 @@ export default function AccessList(props) {
       </label>
       <label>
         <input
+          name="Earings"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -54,6 +71,7 @@ export default function AccessList(props) {
       </label>
       <label>
         <input
+          name="Bottle Opener"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -61,6 +79,7 @@ export default function AccessList(props) {
       </label>
       <label>
         <input
+          name="Knife"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -68,13 +87,15 @@ export default function AccessList(props) {
       </label>
       <label>
         <input
+          name="Pepper Spray"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
-        Purse Spray
+        Pepper Spray
       </label>
       <label>
         <input
+          name="Rings"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

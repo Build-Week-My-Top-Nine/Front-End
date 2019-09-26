@@ -28,6 +28,7 @@ export default function BookList(props) {
       </label>
       <label>
         <input
+          name="Twilight"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -35,6 +36,7 @@ export default function BookList(props) {
       </label>
       <label>
         <input
+          name="50 Shades of Gray"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -42,6 +44,7 @@ export default function BookList(props) {
       </label>
       <label>
         <input
+          name="Eragon"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -49,6 +52,7 @@ export default function BookList(props) {
       </label>
       <label>
         <input
+          name="IT"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -56,6 +60,7 @@ export default function BookList(props) {
       </label>
       <label>
         <input
+          name="The Client"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -63,6 +68,7 @@ export default function BookList(props) {
       </label>
       <label>
         <input
+          name="Vampire Diaries"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -70,6 +76,7 @@ export default function BookList(props) {
       </label>
       <label>
         <input
+          name="A Dogs Purpose"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -77,6 +84,7 @@ export default function BookList(props) {
       </label>
       <label>
         <input
+          name="The 5 People you Meer in Heaven"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

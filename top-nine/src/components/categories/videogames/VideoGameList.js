@@ -27,6 +27,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="Dungeons and Dragons"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -34,6 +35,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="Call of Duty"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -41,6 +43,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="Resident Evil"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -48,6 +51,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="Spyro"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -55,6 +59,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="The Walking Dead"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -62,6 +67,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="Mario Kart"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -69,6 +75,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="PAC-MAN"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -76,6 +83,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="Minecraft"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

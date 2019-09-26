@@ -27,11 +27,12 @@ export default function FoodList(props) {
         Spaghetti
       </label>
       <label>
-        <input type="checkbox" onChange={handleChange}></input>
+        <input name="Croissant" type="checkbox" onChange={handleChange}></input>
         Croissant
       </label>
       <label>
         <input
+          name="Stew"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -39,6 +40,7 @@ export default function FoodList(props) {
       </label>
       <label>
         <input
+          name="Seafood"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -46,6 +48,7 @@ export default function FoodList(props) {
       </label>
       <label>
         <input
+          name="Stuffed Peppers"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -53,6 +56,7 @@ export default function FoodList(props) {
       </label>
       <label>
         <input
+          name="Tostones"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -60,6 +64,7 @@ export default function FoodList(props) {
       </label>
       <label>
         <input
+          name="Tacos"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -67,6 +72,7 @@ export default function FoodList(props) {
       </label>
       <label>
         <input
+          name="Chili"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -74,6 +80,7 @@ export default function FoodList(props) {
       </label>
       <label>
         <input
+          name="Orange Chicken"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

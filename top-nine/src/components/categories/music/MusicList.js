@@ -27,6 +27,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Hip Hop"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -34,6 +35,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Rap"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -41,6 +43,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Rock"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -48,6 +51,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Metal"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -55,6 +59,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Oldies"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -62,6 +67,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Punk"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -69,6 +75,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Classic Rock"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -76,6 +83,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Blues"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

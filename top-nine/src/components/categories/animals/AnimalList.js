@@ -23,12 +23,12 @@ export default function AnimalList(props) {
           name="Cat"
           type="checkbox"
           onChange={handleChange}
-          // onChange={e => setRememberMe(e.target.value)}
         ></input>
         Cat
       </label>
       <label>
         <input
+          name="Dog"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -36,6 +36,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Mouse"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -43,6 +44,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Tiger"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -50,6 +52,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Shark"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -57,6 +60,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Orca"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -64,6 +68,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Squirell"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -71,6 +76,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Monkey"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -78,6 +84,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Giraffe"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

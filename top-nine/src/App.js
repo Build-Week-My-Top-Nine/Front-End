@@ -65,7 +65,7 @@ function App() {
       <div className="App-body">
       <Route exact path="/" component={WelcomePage} />
       <Route path="/Login" render={props => <LoginForm {...props} />} />
-      <Route path="/About" render={props => <About {...props} />} />
+      {/* <Route path="/About" render={props => <About {...props} />} /> */}
       <Route path="/accessories" render={props => <Accessories {...props} handleChange={handleChange} />} />
       <Route path="/animals" render={props => <Animal {...props} handleChange={handleChange} />} />
       <Route path="/boardgames" render={props => <BoardGame {...props} handleChange={handleChange} />}/>
