@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "formik";
+
 export default function AccessList(props) {
   const [rememberMe, setRememberMe] = useState(false);
   const [chosen, setChosen] = useState("");
@@ -12,7 +13,7 @@ export default function AccessList(props) {
     props.handleChange("accessories", chosen)
 
   }, [chosen]);
-  console.log(chosen);
+  console.log(chosen, "Chosen Data");
   return (
     <Form onChange={handleChange}>
       <h3>Accessories List</h3>
