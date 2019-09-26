@@ -43,7 +43,6 @@ function App() {
       <div className="App-body">
       <Route exact path="/" component={WelcomePage} />
       <Route path="/Login" render={props => <LoginForm {...props} />} />
-      <Route path="/About" render={props => <About {...props} />} />
       <Route path="/accessories" component={Accessories} />
       <Route path="/animals" component={Animal} />
       <Route path="/boardgames" component={BoardGame} />
