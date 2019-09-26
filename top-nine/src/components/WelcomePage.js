@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import axios from 'axios';
-import accessList from './categories/accessories/AccessoriesCard'
 
 function WelcomePage(props) {
   console.log(props, "Props");
@@ -52,8 +51,8 @@ const UserCatBody = styled.div`
 
   useEffect(() => {
     axios.get("https://mytopnineapi.herokuapp.com/api/topnine").then(res => {
-        console.log(res.data);
-        setUser(res.data);
+        console.log(res.data[0].UserName, "SET USER DATA");
+        setUser(res.data[0].UserName);
     });
   }, []);
 
@@ -75,7 +74,7 @@ const UserCatBody = styled.div`
             </div>
             <UserSideDiv className="user-sidebar">
             <img className="userPic" src={img} alt="user img" />
-            <h2 user={user.UserName}>{user.UserName || 'User Name'}</h2>
+            <h2 user={props.UserName}>{user || 'User Name'}</h2>
             </UserSideDiv>
             <UserCatBody>THIS IS A TEXT</UserCatBody>
 
