@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "formik";
+import axios from "axios";
 
 export default function BookList(props) {
   const [rememberMe, setRememberMe] = useState(false);
@@ -12,6 +13,20 @@ export default function BookList(props) {
   useEffect(( )=>{
     props.handleChange("books", chosen)
 
+    axios
+      .post("https://mytopnineapi.herokuapp.com/api/topnine", {
+        "UserName": "Bob",
+        "Rank": 1,
+        "TopNineItem": chosen,
+        "Category": "Book",
+      } )
+      .then(res => {
+        console.log(res);
+        // console.log(res.data);
+      })
+      .catch(err => {
+        console.log("ERROR", err);
+      });
   }, [chosen]);
 
   console.log(chosen);

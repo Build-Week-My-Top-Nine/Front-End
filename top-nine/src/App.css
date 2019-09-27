@@ -54,8 +54,10 @@ img {
 }
 
 .searchform {
-  width: 60rem;
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  width: 80rem;
+  margin-top: 0.8rem;
 }
 
 .Form {
@@ -93,7 +95,6 @@ img {
 .button {
   border-radius: 10px;
   margin: auto;
-  padding: 20px;
   font-weight: bold;
 }
 

@@ -51,7 +51,7 @@ function App() {
     })
   };
   
-  console.log(chosenItems);
+  console.log("something", chosenItems);
   return (
     <div className="App">
       <NavBg>

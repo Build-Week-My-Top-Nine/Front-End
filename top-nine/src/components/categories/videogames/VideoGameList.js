@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "formik";
-
+import axios from "axios";
 export default function VGList(props) {
   const [rememberMe, setRememberMe] = useState(false);
   const [chosen, setChosen] = useState("");
@@ -10,7 +10,20 @@ export default function VGList(props) {
   };
   useEffect(( )=>{
     props.handleChange("videoGames", chosen)
-
+    axios
+    .post("https://mytopnineapi.herokuapp.com/api/topnine", {
+      "UserName": "Bob",
+      "Rank": 1,
+      "TopNineItem": chosen,
+      "Category": "Video Game",
+    } )
+    .then(res => {
+      console.log(res);
+      // console.log(res.data);
+    })
+    .catch(err => {
+      console.log("ERROR", err);
+    });
   }, [chosen]);
 
   console.log(chosen);

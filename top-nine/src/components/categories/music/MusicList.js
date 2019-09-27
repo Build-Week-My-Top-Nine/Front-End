@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "formik";
+import axios from "axios";
 
 export default function MusicList(props) {
   const [rememberMe, setRememberMe] = useState(false);
@@ -10,7 +11,20 @@ export default function MusicList(props) {
   };
   useEffect(( )=>{
     props.handleChange("music", chosen)
-
+    axios
+    .post("https://mytopnineapi.herokuapp.com/api/topnine", {
+      "UserName": "Bob",
+      "Rank": 1,
+      "TopNineItem": chosen,
+      "Category": "Music",
+    } )
+    .then(res => {
+      console.log(res);
+      // console.log(res.data);
+    })
+    .catch(err => {
+      console.log("ERROR", err);
+    });
   }, [chosen]);
 
   console.log(chosen);
