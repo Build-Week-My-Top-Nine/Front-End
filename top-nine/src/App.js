@@ -63,7 +63,7 @@ function App() {
       </NavBg>
 
       <div className="App-body">
-      <Route exact path="/" component={WelcomePage} />
+      <Route exact path="/" render={props => <WelcomePage {...props} chosenItems={chosenItems} />} />
       <Route path="/Login" render={props => <LoginForm {...props} />} />
       <Route path="/accessories" render={props => <Accessories {...props} handleChange={handleChange} />} />
       <Route path="/animals" render={props => <Animal {...props} handleChange={handleChange} />} />
