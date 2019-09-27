@@ -15,14 +15,14 @@ export default function BookList(props) {
 
     axios
       .post("https://mytopnineapi.herokuapp.com/api/topnine", {
-        "UserName": "Bob",
-        "Rank": 1,
+        "UserName": "Sarah",
+        "Rank": 4,
         "TopNineItem": chosen,
         "Category": "Book",
       } )
       .then(res => {
         console.log(res);
-        // console.log(res.data);
+        console.log(res.data);
       })
       .catch(err => {
         console.log("ERROR", err);

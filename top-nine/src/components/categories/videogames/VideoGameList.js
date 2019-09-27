@@ -12,8 +12,8 @@ export default function VGList(props) {
     props.handleChange("videoGames", chosen)
     axios
     .post("https://mytopnineapi.herokuapp.com/api/topnine", {
-      "UserName": "Bob",
-      "Rank": 1,
+      "UserName": "Sarah",
+      "Rank": 9,
       "TopNineItem": chosen,
       "Category": "Video Game",
     } )

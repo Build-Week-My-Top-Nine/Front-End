@@ -14,8 +14,8 @@ export default function BGList(props) {
 
     axios
       .post("https://mytopnineapi.herokuapp.com/api/topnine", {
-        "UserName": "Bob",
-        "Rank": 1,
+        "UserName": "Sarah",
+        "Rank": 3,
         "TopNineItem": chosen,
         "Category": "Board Game",
       } )
@@ -27,7 +27,7 @@ export default function BGList(props) {
         console.log("ERROR", err);
       });
   }, [chosen]);
-  console.log(chosen);
+  console.log("something", chosen);
   return (
     <Form onChange={handleChange}>
       <h3>Board Game List </h3>

@@ -13,8 +13,8 @@ export default function MusicList(props) {
     props.handleChange("music", chosen)
     axios
     .post("https://mytopnineapi.herokuapp.com/api/topnine", {
-      "UserName": "Bob",
-      "Rank": 1,
+      "UserName": "Sarah",
+      "Rank": 8,
       "TopNineItem": chosen,
       "Category": "Music",
     } )

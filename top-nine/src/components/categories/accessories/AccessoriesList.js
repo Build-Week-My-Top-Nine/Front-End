@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "formik";
 import axios from "axios";
+
 export default function AccessList(props) {
   const [rememberMe, setRememberMe] = useState(false);
   const [chosen, setChosen] = useState("");
@@ -14,14 +15,14 @@ export default function AccessList(props) {
 
     axios
       .post("https://mytopnineapi.herokuapp.com/api/topnine", {
-        "UserName": "Bob",
+        "UserName": "Sarah",
         "Rank": 1,
         "TopNineItem": chosen,
-        "Category": "accessories",
-      } )
+        "Category": "accessories"
+      })
       .then(res => {
         console.log(res);
-        // console.log(res.data);
+        console.log(res.data);
       })
       .catch(err => {
         console.log("ERROR", err);

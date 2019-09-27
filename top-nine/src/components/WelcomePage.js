@@ -33,6 +33,7 @@ const OtherUserCatBody = styled.div`
     color: orange;
     height: 20rem;
     width: 60%;
+    margin: 0auto;
     margin: 1rem;
     margin-left: 22rem;
     position: absolute;

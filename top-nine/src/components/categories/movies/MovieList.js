@@ -12,8 +12,8 @@ export default function MovieList(props) {
     props.handleChange("movies", chosen)
     axios
     .post("https://mytopnineapi.herokuapp.com/api/topnine", {
-      "UserName": "Bob",
-      "Rank": 1,
+      "UserName": "Sarah",
+      "Rank": 7,
       "TopNineItem": chosen,
       "Category": "Movie",
     } )

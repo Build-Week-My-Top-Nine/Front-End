@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "formik";
 import axios from "axios";
+
 export default function FoodList(props) {
   const [rememberMe, setRememberMe] = useState(false);
   const [chosen, setChosen] = useState("");
@@ -8,22 +9,22 @@ export default function FoodList(props) {
     setRememberMe(e.target.value);
     setChosen(e.target.name);
   };
-  useEffect(( )=>{
-    props.handleChange("food", chosen)
+  useEffect(() => {
+    props.handleChange("food", chosen);
     axios
-    .post("https://mytopnineapi.herokuapp.com/api/topnine", {
-      "UserName": "Bob",
-      "Rank": 1,
-      "TopNineItem": chosen,
-      "Category": "Food",
-    } )
-    .then(res => {
-      console.log(res);
-      // console.log(res.data);
-    })
-    .catch(err => {
-      console.log("ERROR", err);
-    });
+      .post("https://mytopnineapi.herokuapp.com/api/topnine", {
+       "UserName": "Sarah",
+        "Rank": 6,
+        "TopNineItem": chosen,
+        "Category": "Food"
+      })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log("ERROR", err);
+      });
   }, [chosen]);
 
   console.log(chosen);

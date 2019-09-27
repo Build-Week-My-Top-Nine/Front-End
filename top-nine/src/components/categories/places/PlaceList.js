@@ -13,8 +13,8 @@ export default function PlaceList(props) {
 
     axios
     .post("https://mytopnineapi.herokuapp.com/api/topnine", {
-      "UserName": "Bob",
-      "Rank": 1,
+      "UserName": "Sarah",
+      "Rank": 10,
       "TopNineItem": chosen,
       "Category": "Place",
     } )
