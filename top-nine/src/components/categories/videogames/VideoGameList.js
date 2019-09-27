@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "formik";
-
+import axios from "axios";
 export default function VGList(props) {
   const [rememberMe, setRememberMe] = useState(false);
   const [chosen, setChosen] = useState("");
@@ -10,7 +10,20 @@ export default function VGList(props) {
   };
   useEffect(( )=>{
     props.handleChange("videoGames", chosen)
-
+    axios
+    .post("https://mytopnineapi.herokuapp.com/api/topnine", {
+      "UserName": "Sarah",
+      "Rank": 9,
+      "TopNineItem": chosen,
+      "Category": "Video Game",
+    } )
+    .then(res => {
+      console.log(res);
+      // console.log(res.data);
+    })
+    .catch(err => {
+      console.log("ERROR", err);
+    });
   }, [chosen]);
 
   console.log(chosen);
@@ -27,6 +40,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="Dungeons and Dragons"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -34,6 +48,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="Call of Duty"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -41,6 +56,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="Resident Evil"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -48,6 +64,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="Spyro"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -55,6 +72,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="The Walking Dead"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -62,6 +80,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="Mario Kart"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -69,6 +88,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="PAC-MAN"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -76,6 +96,7 @@ export default function VGList(props) {
       </label>
       <label>
         <input
+          name="Minecraft"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

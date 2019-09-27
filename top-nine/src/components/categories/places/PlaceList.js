@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "formik";
-
+import axios from "axios";
 export default function PlaceList(props) {
   const [rememberMe, setRememberMe] = useState(false);
   const [chosen, setChosen] = useState("");
@@ -11,6 +11,20 @@ export default function PlaceList(props) {
   useEffect(( )=>{
     props.handleChange("places", chosen)
 
+    axios
+    .post("https://mytopnineapi.herokuapp.com/api/topnine", {
+      "UserName": "Sarah",
+      "Rank": 10,
+      "TopNineItem": chosen,
+      "Category": "Place",
+    } )
+    .then(res => {
+      console.log(res);
+      // console.log(res.data);
+    })
+    .catch(err => {
+      console.log("ERROR", err);
+    });
   }, [chosen]);
 
   console.log(chosen);
@@ -27,6 +41,7 @@ export default function PlaceList(props) {
       </label>
       <label>
         <input
+          name="France"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -34,6 +49,7 @@ export default function PlaceList(props) {
       </label>
       <label>
         <input
+          name="Ireland"
           type="radio"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -41,6 +57,7 @@ export default function PlaceList(props) {
       </label>
       <label>
         <input
+          name="Portugal"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -48,6 +65,7 @@ export default function PlaceList(props) {
       </label>
       <label>
         <input
+          name="Poland"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -55,6 +73,7 @@ export default function PlaceList(props) {
       </label>
       <label>
         <input
+          name="Dominican Republic"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -62,6 +81,7 @@ export default function PlaceList(props) {
       </label>
       <label>
         <input
+          name="Mexico"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -69,6 +89,7 @@ export default function PlaceList(props) {
       </label>
       <label>
         <input
+          name="Spain"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -76,6 +97,7 @@ export default function PlaceList(props) {
       </label>
       <label>
         <input
+          name="Asia"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

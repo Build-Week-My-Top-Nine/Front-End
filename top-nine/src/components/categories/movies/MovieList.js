@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "formik";
-
+import axios from "axios";
 export default function MovieList(props) {
   const [rememberMe, setRememberMe] = useState(false);
   const [chosen, setChosen] = useState("");
@@ -10,7 +10,20 @@ export default function MovieList(props) {
   };
   useEffect(( )=>{
     props.handleChange("movies", chosen)
-
+    axios
+    .post("https://mytopnineapi.herokuapp.com/api/topnine", {
+      "UserName": "Sarah",
+      "Rank": 7,
+      "TopNineItem": chosen,
+      "Category": "Movie",
+    } )
+    .then(res => {
+      console.log(res);
+      // console.log(res.data);
+    })
+    .catch(err => {
+      console.log("ERROR", err);
+    });
   }, [chosen]);
 
   console.log(chosen);
@@ -27,6 +40,7 @@ export default function MovieList(props) {
       </label>
       <label>
         <input
+          name="Comedy"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -34,6 +48,7 @@ export default function MovieList(props) {
       </label>
       <label>
         <input
+          name="Romantic"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -41,6 +56,7 @@ export default function MovieList(props) {
       </label>
       <label>
         <input
+          name="Family Friendly"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -48,6 +64,7 @@ export default function MovieList(props) {
       </label>
       <label>
         <input
+          name="Cartoon"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -55,6 +72,7 @@ export default function MovieList(props) {
       </label>
       <label>
         <input
+          name="Animal"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -62,6 +80,7 @@ export default function MovieList(props) {
       </label>
       <label>
         <input
+          name="Silent"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -69,6 +88,7 @@ export default function MovieList(props) {
       </label>
       <label>
         <input
+          name="Fiction"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -76,6 +96,7 @@ export default function MovieList(props) {
       </label>
       <label>
         <input
+          name="Non Fiction"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

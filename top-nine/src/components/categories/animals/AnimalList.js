@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "formik";
+import axios from "axios";
+
 
 export default function AnimalList(props) {
   const [rememberMe, setRememberMe] = useState(false);
@@ -12,23 +14,36 @@ export default function AnimalList(props) {
   useEffect(( )=>{
     props.handleChange("animals", chosen)
 
+    axios
+      .post("https://mytopnineapi.herokuapp.com/api/topnine", {
+        "UserName": "Sarah",
+        "Rank": 2,
+        "TopNineItem": chosen,
+        "Category": "Animal",
+      } )
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log("ERROR", err);
+      });
   }, [chosen]);
-
   console.log(chosen);
   return (
-    <Form>
+    <Form onChange={handleChange}>
       <h3>Animal List</h3>
       <label>
         <input
           name="Cat"
           type="checkbox"
-          onChange={handleChange}
-          // onChange={e => setRememberMe(e.target.value)}
+          onChange={e => setRememberMe(e.target.value)}
         ></input>
         Cat
       </label>
       <label>
         <input
+          name="Dog"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -36,6 +51,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Mouse"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -43,6 +59,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Tiger"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -50,6 +67,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Shark"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -57,6 +75,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Orca"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -64,6 +83,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Squirell"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -71,6 +91,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Monkey"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -78,6 +99,7 @@ export default function AnimalList(props) {
       </label>
       <label>
         <input
+          name="Giraffe"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "formik";
+import axios from "axios";
 
 export default function MusicList(props) {
   const [rememberMe, setRememberMe] = useState(false);
@@ -10,7 +11,20 @@ export default function MusicList(props) {
   };
   useEffect(( )=>{
     props.handleChange("music", chosen)
-
+    axios
+    .post("https://mytopnineapi.herokuapp.com/api/topnine", {
+      "UserName": "Sarah",
+      "Rank": 8,
+      "TopNineItem": chosen,
+      "Category": "Music",
+    } )
+    .then(res => {
+      console.log(res);
+      // console.log(res.data);
+    })
+    .catch(err => {
+      console.log("ERROR", err);
+    });
   }, [chosen]);
 
   console.log(chosen);
@@ -27,6 +41,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Hip Hop"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -34,6 +49,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Rap"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -41,6 +57,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Rock"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -48,6 +65,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Metal"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -55,6 +73,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Oldies"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -62,6 +81,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Punk"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -69,6 +89,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Classic Rock"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
@@ -76,6 +97,7 @@ export default function MusicList(props) {
       </label>
       <label>
         <input
+          name="Blues"
           type="checkbox"
           onChange={e => setRememberMe(e.target.value)}
         ></input>
