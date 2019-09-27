@@ -32,13 +32,17 @@ const OtherUserCatBody = styled.div`
     background-color: white;
     border-radius: 2rem;
     color: orange;
-    height: 20rem;
+    height: 30rem;
     width: 60%;
     margin: 1rem;
     margin-left: 22rem;
     position: absolute;
     top: 105%;
+    text-align: center;
 `
+
+const CustomH1 = styled.h1`
+margin-bottom: 2rem;`
 
   //   };
 
@@ -73,17 +77,17 @@ const OtherUserCatBody = styled.div`
             <img className="userPic" src={img} alt="user img" />
             <h2 user={props.UserName}>{user || 'User Name'}</h2>
             </UserSideDiv>
-            <UserCatBody><h1>My Top Nine</h1>
-            <h6>{props.chosenItems.animals}</h6>
-            <h6>{props.chosenItems.accessories}</h6>
-            <h6>{props.chosenItems.boardGames}</h6>
-            <h6>{props.chosenItems.books}</h6>
-            <h6>{props.chosenItems.cars}</h6>
-            <h6>{props.chosenItems.food}</h6>
-            <h6>{props.chosenItems.movies}</h6>
-            <h6>{props.chosenItems.music}</h6>
-            <h6>{props.chosenItems.places}</h6>
-            <h6>{props.chosenItems.videoGames}</h6>
+            <UserCatBody><CustomH1>My Top Nine</CustomH1>
+            <h6 className="useritem">{props.chosenItems.animals}</h6>
+            <h6 className="useritem">{props.chosenItems.accessories}</h6>
+            <h6 className="useritem">{props.chosenItems.boardGames}</h6>
+            <h6 className="useritem">{props.chosenItems.books}</h6>
+            <h6 className="useritem">{props.chosenItems.cars}</h6>
+            <h6 className="useritem">{props.chosenItems.food}</h6>
+            <h6 className="useritem">{props.chosenItems.movies}</h6>
+            <h6 className="useritem">{props.chosenItems.music}</h6>
+            <h6 className="useritem">{props.chosenItems.places}</h6>
+            <h6 className="useritem">{props.chosenItems.videoGames}</h6>
             </UserCatBody>
 
             <div className="other-user-topnine">

@@ -136,6 +136,15 @@ img {
   height: 1.2rem;
 }
 
+.useritem{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 0.3rem;
+  width: 20%;
+  text-align: center;
+}
+
 .welcome {
   height: 100%;
 }
