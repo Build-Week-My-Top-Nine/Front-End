@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import SearchForm from "./components/search/SearchForm";
 import styled from "styled-components";
 import LoginForm from "./components/LogInPage";
 import { Route } from "react-router-dom";
 import Nav from './components/Nav'
+import axios from 'axios';
 
 import WelcomePage from './components/WelcomePage'
 import Accessories from './components/categories/accessories/AccessoriesCard'
@@ -25,7 +26,8 @@ const NavBg = styled.header`
 
 const LogoH1 = styled.h1`
   color: white;
-  margin: 1rem;
+  margin: 1.5rem;
+  padding: 0.1rem;
 `
 
 function App() {
@@ -42,6 +44,9 @@ function App() {
     places: "",
     videoGames: "",
   });
+
+  const [user, setUser] = useState([]);
+
   const handleChange = (catagory, item) => {
     // setRememberMe(!rememberMe);
     // console.log(catagory, item);
@@ -50,6 +55,13 @@ function App() {
      [ catagory ]: item
     })
   };
+
+  useEffect(() => {
+    axios.get("https://mytopnineapi.herokuapp.com/api/topnine").then(res => {
+        console.log(res.data[0].UserName, "SET USER DATA");
+        setUser(res.data[0].UserName);
+    }); 
+  }, []);
   
   console.log(chosenItems);
   return (
@@ -63,7 +75,11 @@ function App() {
       </NavBg>
 
       <div className="App-body">
-      <Route exact path="/" render={props => <WelcomePage {...props} chosenItems={chosenItems} />} />
+      <Route exact path="/" render={props => <WelcomePage {...props} 
+                            chosenItems={chosenItems}
+                            user={user} 
+                            setUser={setUser}
+                             />} />
       <Route path="/Login" render={props => <LoginForm {...props} />} />
       <Route path="/accessories" render={props => <Accessories {...props} handleChange={handleChange} />} />
       <Route path="/animals" render={props => <Animal {...props} handleChange={handleChange} />} />
