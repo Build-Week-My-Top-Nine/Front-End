@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom'
 export default function Nav(){
     return (
         <div className="Nav">
-            <NavLink className="NavLink" to="/">
+            <NavLink className="NavLink" activeClassName="active" to="/">
               Home
             </NavLink>
-            <NavLink className="NavLink" to="/Login">
+            <NavLink className="NavLink" activeClassName="active" to="/Login">
               Login
             </NavLink>
         </div>

@@ -4,6 +4,7 @@ import axios from "axios";
 
 
 export default function AnimalList(props) {
+  console.log(props, "App props")
   const [rememberMe, setRememberMe] = useState(false);
   const [chosen, setChosen] = useState("");
 
